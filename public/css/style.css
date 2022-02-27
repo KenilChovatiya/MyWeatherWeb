@@ -67,13 +67,14 @@ body{
 
 
 /* Main Header Style(Home Page) */
+/*
 #mainHeader{
     display: flex;
     justify-content: center;
 }
 
 .main_header_left{
-    height: 80rem;
+    height: 60rem;
     width: 40%;
     display: flex;
     flex-direction: column;
@@ -88,7 +89,7 @@ body{
 .main_header_left h1{
     font-weight: 600;
     font-size: 3.5rem;
-    margin: 1rem 0 4rem 0;
+    margin: 1rem 0 3rem 0;
 }
 
 .main_header_left .text_clr{
@@ -97,16 +98,21 @@ body{
 }
 
 .main_header_right{
-    height: 80rem;
+    height: 60rem;
     width:60%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    align-items: flex-end;
 }
 
 .main_header_right figure img{
     filter: drop-shadow(0 0.5rem 1rem rgba(0,0,0,0.3));
+}
+
+.main_header_right .small-img{
+    height: 60rem;
+    width: 100%;
 }
 
 #icon{
@@ -118,7 +124,7 @@ body{
 } 
 
 
-/* All Button CSS Style */
+/* All Button CSS Style *//*
 .main_header_left button {
     width: 200px;
     font-size: 2rem;
@@ -145,7 +151,75 @@ body{
     background-image: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
     box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
 }
- 
+ */
+
+ #mainHeader{
+     display: flex;
+     justify-content: space-between;
+     /* border: 2px solid black; */
+ }
+
+ .main-row{
+     margin-top: 80px;
+ }
+
+ .main_header_left{
+     width: 50%;
+     /* border: 2px solid black; */
+    margin: auto 0;
+ }
+
+.main_header_right{
+    width: 50%;
+    text-align: center;
+    /* border: 2px solid black; */
+}
+
+.small-img{
+    width: 70%;
+    
+}
+
+.main_header_left p{
+    font-size: 2.5rem;
+}
+
+.main_header_left h1{
+    font-weight: 600;
+    font-size: 3.5rem;
+    margin: 1rem 0 3rem 0;
+}
+
+.main_header_left .text_clr{
+    color: var(--main-color);
+    font-weight: 600;
+}
+
+.main_header_left button {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #fff;
+    padding: 10px 15px;
+    text-align:center;
+    border: none;
+    background-size: 300% 100%;
+    border-radius: 4rem;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.main_header_left button:hover {
+    background-position: 100% 0;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.main_header_left button {
+    background-image: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
+    box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
+}
 
 /* Weather Page Style */
 .temp_form{
@@ -353,9 +427,27 @@ footer p{
 
 
 /* Responsive Code */
-@media (max-width: 768px){
+
+@media only screen and (max-width: 991px){
+    html{
+        font-size: 50%;
+    }
+
+    .main_header_left h1 {
+        font-size: 2.5rem;
+    }
+
+    .main_header_left p {
+        font-size: 2rem;
+    }
+}
+
+@media only screen and (max-width: 768px){
 
     /* Navbar Style */
+    html{
+        font-size: 50%;
+    }
     .navbar-nav .nav-link{
         padding: 0 1rem;
         display: inline-block;
@@ -366,10 +458,13 @@ footer p{
         flex-direction: column-reverse;
     }
 
+    .main-row{
+        margin-top: 0;
+    }
+    
     .main_header_left{
-        height: auto;
-        width: auto;
-        margin: 5rem 0;
+        width: 100%;
+        margin-bottom: 30px;
     }
 
     .main_header_left p{
@@ -381,10 +476,15 @@ footer p{
     }
 
     .main_header_right{
-        height: auto;
-        width: auto;
+        width: 100%;
         margin-top: 3rem 0;
     }
+
+    .small-img {
+        width: 75%;
+    }
+
+
 
     .temp_form{
         width: auto;
@@ -422,21 +522,27 @@ footer p{
     }
 }
 
+@media only screen and (max-width: 480px){
+    .small-img {
+        width: 75%;
+    }
 
-@media (max-width: 280px){
+}
+
+@media only screen and (max-width: 280px){
     /* Navbar Style */
     .navbar a{
         font-size: 1.5rem;
     }
 
     /* Main header(Home Page) */
-    .main_header_left button {
+    /* .main_header_left button {
         width: 110px;
         font-size: 1.2rem;
         height: 40px;
         border-radius: 4rem;
     }
-
+ */
     .main_header_left p{
         font-size: 1.3rem;
     }
